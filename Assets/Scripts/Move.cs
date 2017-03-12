@@ -34,7 +34,7 @@ public class Move : MonoBehaviour {
         float h = CrossPlatformInputManager.GetAxis("Horizontal");
         float v = CrossPlatformInputManager.GetAxis("Vertical");
 
-        transform.Translate(transform.up * speed * v);
+        //transform.Translate(transform.up * speed * v);
        // transform.Translate(transform.right * speed * h);
 
         if(main_rigidbody.velocity==new Vector2(0,0))
@@ -51,13 +51,13 @@ public class Move : MonoBehaviour {
 
         if (facingright)
         {
-            main_rigidbody.velocity = new Vector2(h * 4, v);
+            main_rigidbody.velocity = new Vector2(h * 4, v*4);
         }
 
         else
         {
 
-            main_rigidbody.velocity = new Vector2(h * 4, v);
+            main_rigidbody.velocity = new Vector2(h * 4, v*4);
         }
 
         if (h>0 && !facingright)

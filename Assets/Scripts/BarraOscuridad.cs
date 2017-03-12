@@ -19,7 +19,7 @@ public class BarraOscuridad : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        oscBar.value -= Time.deltaTime*3;
+        oscBar.value -= Time.deltaTime*1.5f;
 
         if (oscBar.value < 50)
         {

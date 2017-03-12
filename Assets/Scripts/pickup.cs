@@ -12,7 +12,7 @@ public class pickup : MonoBehaviour
     public AudioClip cp;
     public AudioSource source;
     public GameObject puerta;
-    
+    public Text allpickups;
 
     public RawImage alma;
     public RawImage corazon;
@@ -31,6 +31,7 @@ public class pickup : MonoBehaviour
     {
         if(pickedup==5)
         {
+            allpickups.gameObject.SetActive(true);
             Destroy(puerta);
         }
     }
